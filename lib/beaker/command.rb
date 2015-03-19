@@ -165,7 +165,7 @@ module Beaker
 
   class PuppetCommand < Command
     def initialize *args
-      command = "puppet #{args.shift}"
+      command = "puppet #{args.shift} --cfacter"
       opts = args.last.is_a?(Hash) ? args.pop : Hash.new
       opts['ENV'] ||= Hash.new
       opts[:cmdexe] = true
